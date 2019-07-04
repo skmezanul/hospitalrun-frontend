@@ -10,7 +10,9 @@
   "scripts": {
     "build": "./script/build",
     "start": "./script/server",
-    "test": "./script/test"
+    "test": "./script/test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "",
   "engines": {
@@ -59,11 +61,13 @@
     "request": "2.69.0"
   },
   "dependencies": {
-    "ember-radio-buttons": "^4.0.1"
+    "ember-radio-buttons": "^4.0.1",
+    "snyk": "^1.189.0"
   },
   "ember-addon": {
     "paths": [
       "lib/pouch-fixtures"
     ]
-  }
+  },
+  "snyk": true
 }
